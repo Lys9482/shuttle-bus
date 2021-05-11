@@ -5,3 +5,7 @@ shuttle bus location: 1User location 1number of stops 0
 shuttle bus location: 1User location 1number of stops 0
 shuttle bus location: 1User location 3number of stops 2
 Initial Passengers2 Available Seats 0
+shuttle bus location: 1User location 1number of stops 0
+Initial Passengers3 Available Seats 3
+shuttle bus location: 3User location 1number of stops 2
+Initial Passengers0 Available Seats 2

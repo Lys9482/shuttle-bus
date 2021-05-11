@@ -2,3 +2,5 @@ shuttle bus location: 1 User Location: 1 Distance between stops 0 Speed of shutt
 
 shuttle bus location: 1 User Location: 1 Distance between stops 0 Speed of shuttle bus: 35 number of stops shuttle makes: 0 time at stops: 6
 shuttle bus location: 1 User Location: 3 Distance between stops 8 Speed of shuttle bus: 35 number of stops shuttle makes: 2 time at stops: 4
+shuttle bus location: 1 User Location: 1 Distance between stops 0 Speed of shuttle bus: 35 number of stops shuttle makes: 0 time at stops: 8
+shuttle bus location: 3 User Location: 1 Distance between stops 9 Speed of shuttle bus: 35 number of stops shuttle makes: 2 time at stops: 5

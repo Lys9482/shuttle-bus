@@ -51,42 +51,7 @@ public class Login extends javax.swing.JFrame {
            
         }
     }
-   /* void addData(String firstName, String lastName, String email, String username, String password){
-        try {
-            RandomAccessFile ran = new RandomAccessFile(f + "\\login.txt", "rw");
-            ran.writeBytes("First Name: " + firstName + "\r\n");
-            ran.writeBytes("Last Name: " + lastName + "\r\n");
-            ran.writeBytes("Email: " + email + "\r\n");
-            ran.writeBytes("Username: " + username + "\r\n");
-            ran.writeBytes("Password : " + password + "\r\n");
-        } catch (FileNotFoundException ex) {
-            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IOException ex) {
-            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
-    void CheckData(String firstName, String lastName, String email, String username, String password) throws IOException{
-        
-        try {
-            RandomAccessFile ran = new RandomAccessFile(f+"\\login.txt", "rw");
-             String line = ran.readLine();
-             Username=line.substring(9);
-             Password=ran.readLine().substring(9);
-             if(username.equals(Username)&password.equals(Password)){
-                 JOptionPane.showMessageDialog(null, "Password match");
-                 
-             }
-             else{
-                 JOptionPane.showMessageDialog(null, "Password Does Not Match");
-             }
-        } catch (FileNotFoundException ex) {
-            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
-        
-    }
-     
-*/
+ 
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

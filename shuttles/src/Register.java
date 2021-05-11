@@ -266,7 +266,7 @@ public class Register extends javax.swing.JFrame {
         
            //check password
            boolean verifyPassword = false;
-           if((password.length()>= 7) && !password.equals(password.toLowerCase())){
+           if((password.length()>= 7)){
                verifyPassword = true;
                
            }
@@ -279,7 +279,7 @@ public class Register extends javax.swing.JFrame {
            
               bw.close();
              setVisible(false);
-             //new Register().setVisible(true);
+             new Register().setVisible(true);
                
            }
            else if(!verifyEmail){
@@ -289,7 +289,7 @@ public class Register extends javax.swing.JFrame {
                jTextField3.setText(" ");
            }
            else if(!verifyPassword){
-               JOptionPane.showMessageDialog(null,"password needs to have capital letter and number");
+               JOptionPane.showMessageDialog(null,"password needs to be at least 7 characters");
                
                jPasswordField1.setText(" ");
               
