@@ -64,7 +64,7 @@
                   <Component id="jToggleButtonBus1Capacity" min="-2" pref="162" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
                   <Component id="jToggleButton2Bus2Capacity" min="-2" pref="148" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="212" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="211" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -77,12 +77,12 @@
                       <Component id="jPanel3" max="32767" attributes="0"/>
                       <Component id="jPanel4" max="32767" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jToggleButtonBus1Capacity" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                      <Component id="jToggleButton2Bus2Capacity" alignment="3" min="-2" pref="44" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Component id="jToggleButtonBus1Capacity" min="-2" pref="38" max="-2" attributes="0"/>
+                      <Component id="jToggleButton2Bus2Capacity" min="-2" pref="44" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="429" max="32767" attributes="0"/>
+                  <EmptySpace pref="432" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -214,6 +214,9 @@
         </Container>
         <Component class="javax.swing.JToggleButton" name="jToggleButtonBus1Capacity">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="90" red="1e" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Shuttle Bus 1 Capacity"/>
           </Properties>
           <Events>
@@ -272,6 +275,9 @@
         </Container>
         <Component class="javax.swing.JToggleButton" name="jToggleButton2Bus2Capacity">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="db" green="70" red="93" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Shuttle Bus 2 Capacity"/>
           </Properties>
           <Events>

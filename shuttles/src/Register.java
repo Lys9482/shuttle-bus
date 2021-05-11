@@ -58,19 +58,19 @@ public class Register extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(51, 204, 51));
         jPanel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(51, 153, 51), 6, true));
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel2.setText("First Name :");
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel3.setText("Last Name:");
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel5.setText("Email:");
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel6.setText("Username:");
 
-        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel7.setText("Password: ");
 
         jButton1.setBackground(new java.awt.Color(0, 153, 51));
@@ -86,15 +86,25 @@ public class Register extends javax.swing.JFrame {
             }
         });
 
-        jTextField1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jTextField1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
 
-        jTextField2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jTextField2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
 
-        jTextField3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jTextField3.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField3ActionPerformed(evt);
+            }
+        });
 
-        jTextField4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jTextField4.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
 
-        jPasswordField1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jPasswordField1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jPasswordField1ActionPerformed(evt);
+            }
+        });
 
         jToggleButton1.setBackground(new java.awt.Color(255, 204, 0));
         jToggleButton1.setText("Cancel");
@@ -104,6 +114,7 @@ public class Register extends javax.swing.JFrame {
             }
         });
 
+        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel8.setText("Click Here to Login");
         jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -167,12 +178,12 @@ public class Register extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(322, 322, 322)
-                        .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(404, 404, 404)
-                        .addComponent(jButton1))
+                        .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(393, 393, 393)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(561, 561, 561)
-                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -201,10 +212,10 @@ public class Register extends javax.swing.JFrame {
                         .addGap(54, 54, 54)
                         .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel7))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 72, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jToggleButton1)
-                    .addComponent(jButton1))
+                    .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(28, 28, 28)
                 .addComponent(jLabel8)
                 .addGap(124, 124, 124))
@@ -242,47 +253,55 @@ public class Register extends javax.swing.JFrame {
            if(!file.exists()){
                file.createNewFile();
            }
-//f = new File("register.txt");
-           //f.createNewFile();
-           //bool = f.exists();
-           //System.err.println("File Exists:" +bool);
+
            FileWriter Writer = new FileWriter(file,true);
            BufferedWriter bw = new BufferedWriter(Writer);
-           bw.write(firstName+" " +lastName+ " " + email + " " + username + " " + password + " ");
-           //Writer.write(firstName+" " +lastName+ " " + email + " " + username + " " + password + " ");
-           bw.newLine();
-           //System.err.print(firstName+" " +lastName+ " " + email + " " + username );
            
+           //check email
+           boolean verifyEmail = false;
+           if(email.contains("@spartans.nsu.edu")){
+                verifyEmail = true;
           
-           //Writer.flush();
-           bw.close();
-           JOptionPane.showMessageDialog(null, "Success");
-           setVisible(false);
-           new Register().setVisible(true);
+           }
+        
+           //check password
+           boolean verifyPassword = false;
+           if((password.length()>= 7) && !password.equals(password.toLowerCase())){
+               verifyPassword = true;
+               
+           }
+           
+           if(verifyPassword && verifyEmail){
+               JOptionPane.showMessageDialog(null,"Successful Registration");
+                bw.write(firstName+" " +lastName+ " " + email + " " + username + " " + password + " ");
+           
+               bw.newLine();
+           
+              bw.close();
+             setVisible(false);
+             //new Register().setVisible(true);
+               
+           }
+           else if(!verifyEmail){
+               JOptionPane.showMessageDialog(null, "invalid email address");
+               
+               
+               jTextField3.setText(" ");
+           }
+           else if(!verifyPassword){
+               JOptionPane.showMessageDialog(null,"password needs to have capital letter and number");
+               
+               jPasswordField1.setText(" ");
+              
+           }
+           
         }
             catch(IOException e){
                 e.printStackTrace();
                 JOptionPane.showMessageDialog(null,"Error");
                     
                     }
-        /*try{
-            FileReader fr = new FileReader(file);
-            BufferedReader br = new BufferedReader(fr);
-            StringBuffer sb = new StringBuffer();
-            String line;
-            while((line=br.readLine())!=null){
-                sb.append(line);
-                sb.append("\n");
-                
-            }
-            fr.close();
-            System.out.println("Contents of File");
-            System.out.println(sb.toString());
-        }
-        catch (IOException e){
-            e.printStackTrace();
-            
-        }*/
+        
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -303,6 +322,14 @@ public class Register extends javax.swing.JFrame {
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1MouseClicked
+
+    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField3ActionPerformed
+
+    private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jPasswordField1ActionPerformed
  
     /**
      * @param args the command line arguments

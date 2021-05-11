@@ -126,6 +126,7 @@ public class Capacity extends javax.swing.JFrame {
                     .addComponent(jLabel5)))
         );
 
+        jToggleButtonBus1Capacity.setBackground(new java.awt.Color(30, 144, 255));
         jToggleButtonBus1Capacity.setText("Shuttle Bus 1 Capacity");
         jToggleButtonBus1Capacity.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -161,6 +162,7 @@ public class Capacity extends javax.swing.JFrame {
             .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING)
         );
 
+        jToggleButton2Bus2Capacity.setBackground(new java.awt.Color(147, 112, 219));
         jToggleButton2Bus2Capacity.setText("Shuttle Bus 2 Capacity");
         jToggleButton2Bus2Capacity.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -187,7 +189,7 @@ public class Capacity extends javax.swing.JFrame {
                 .addComponent(jToggleButtonBus1Capacity, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jToggleButton2Bus2Capacity, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(212, 212, 212))
+                .addGap(211, 211, 211))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -197,11 +199,11 @@ public class Capacity extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(54, 54, 54)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGap(51, 51, 51)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jToggleButtonBus1Capacity, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jToggleButton2Bus2Capacity, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(429, Short.MAX_VALUE))
+                .addContainerGap(432, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -270,14 +272,14 @@ try{
           int availableSeats = 4 - passengers;
           JOptionPane.showMessageDialog(null, "Shuttle Bus has " + availableSeats + " available seats" );
       }
-      File capFile = new File("Capacity.txt");
+      File capFile = new File("BusCapacity.txt");
      if(!capFile.exists()){
          capFile.createNewFile();
      }
       FileWriter Writer = new FileWriter(capFile,true);
       BufferedWriter bwrite = new BufferedWriter(Writer);
        bwrite.write("Initial Passengers" + initialPass +  " Available Seats " + passengers + '\n');
-     Writer.close();
+     bwrite.close();
     
  
  
@@ -333,11 +335,12 @@ try{
    BufferedReader buffReader = new BufferedReader(fr);
    String line;
    boolean isFull = false;
+   Random rand = new Random();
    while((line=buffReader.readLine())!=null){
      String stops = line.split(" ")[3].toLowerCase();
      System.err.println(stops);
      int numOfStops = Integer.parseInt(stops);
-     Random rand = new Random();
+     
      
      int passengers  = rand.nextInt(4);
      int initialPass = passengers;
@@ -356,30 +359,29 @@ try{
            passengers = 4;
        }
 }
-      System.err.println("The passengers are "+ passengers);
+     
+      //System.err.println("The passengers are "+ passengers);
       if (passengers >= 4){
        isFull = true;
-       JOptionPane.showMessageDialog(null, "Shuttle Bus is Full");
+         JOptionPane.showMessageDialog(null, "Shuttle Bus is Full");
       
         }
       else{
           int availableSeats = 4 - passengers;
           JOptionPane.showMessageDialog(null, "Shuttle Bus has " + availableSeats + " available seats" );
       }
-      File capFile = new File("Capacity.txt");
+    
+     File capFile = new File("BusCapacity.txt");
      if(!capFile.exists()){
          capFile.createNewFile();
      }
      FileWriter Writer = new FileWriter(capFile,true);
       BufferedWriter bwrite = new BufferedWriter(Writer);
        bwrite.write("Initial Passengers" + initialPass +  " Available Seats " + passengers + '\n');
-     Writer.close();
-    
+     bwrite.close();
  
 }
-  
-
-
+ 
 }
  catch(Exception e){
   e.printStackTrace();

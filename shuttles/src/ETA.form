@@ -258,6 +258,9 @@
         </Container>
         <Component class="javax.swing.JButton" name="Bus1Stop1Button">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="90" red="1e" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Shuttle Stop 1"/>
           </Properties>
           <Events>
@@ -266,6 +269,9 @@
         </Component>
         <Component class="javax.swing.JButton" name="Bus1Stop2Button">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="90" red="1e" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Shuttle Stop 2"/>
           </Properties>
           <Events>
@@ -274,6 +280,9 @@
         </Component>
         <Component class="javax.swing.JButton" name="Bus1Stop3Button">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="90" red="1e" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Shuttle Stop 3"/>
           </Properties>
           <Events>
@@ -282,6 +291,9 @@
         </Component>
         <Component class="javax.swing.JButton" name="Bus1Stop4Button">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="90" red="1e" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Shuttle Stop 4"/>
           </Properties>
           <Events>
@@ -290,6 +302,9 @@
         </Component>
         <Component class="javax.swing.JToggleButton" name="jToggleButtonStop2Bus2">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="db" green="70" red="93" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Shuttle Stop 2"/>
           </Properties>
           <Events>
@@ -298,6 +313,9 @@
         </Component>
         <Component class="javax.swing.JToggleButton" name="jToggleButtonBus2Stop3">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="db" green="70" red="93" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Shuttle Stop 3"/>
           </Properties>
           <Events>
@@ -306,6 +324,9 @@
         </Component>
         <Component class="javax.swing.JToggleButton" name="jToggleButtonStop4Bus2">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="db" green="70" red="93" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Shuttle Stop 4"/>
           </Properties>
           <Events>
@@ -322,6 +343,9 @@
         </Component>
         <Component class="javax.swing.JToggleButton" name="jToggleButtonStop1Bus2">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="db" green="70" red="93" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Shuttle Stop 1"/>
           </Properties>
           <Events>

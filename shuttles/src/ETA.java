@@ -144,6 +144,7 @@ public class ETA extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        Bus1Stop1Button.setBackground(new java.awt.Color(30, 144, 255));
         Bus1Stop1Button.setText("Shuttle Stop 1");
         Bus1Stop1Button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -151,6 +152,7 @@ public class ETA extends javax.swing.JFrame {
             }
         });
 
+        Bus1Stop2Button.setBackground(new java.awt.Color(30, 144, 255));
         Bus1Stop2Button.setText("Shuttle Stop 2");
         Bus1Stop2Button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -158,6 +160,7 @@ public class ETA extends javax.swing.JFrame {
             }
         });
 
+        Bus1Stop3Button.setBackground(new java.awt.Color(30, 144, 255));
         Bus1Stop3Button.setText("Shuttle Stop 3");
         Bus1Stop3Button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -165,6 +168,7 @@ public class ETA extends javax.swing.JFrame {
             }
         });
 
+        Bus1Stop4Button.setBackground(new java.awt.Color(30, 144, 255));
         Bus1Stop4Button.setText("Shuttle Stop 4");
         Bus1Stop4Button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -172,6 +176,7 @@ public class ETA extends javax.swing.JFrame {
             }
         });
 
+        jToggleButtonStop2Bus2.setBackground(new java.awt.Color(147, 112, 219));
         jToggleButtonStop2Bus2.setText("Shuttle Stop 2");
         jToggleButtonStop2Bus2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -179,6 +184,7 @@ public class ETA extends javax.swing.JFrame {
             }
         });
 
+        jToggleButtonBus2Stop3.setBackground(new java.awt.Color(147, 112, 219));
         jToggleButtonBus2Stop3.setText("Shuttle Stop 3");
         jToggleButtonBus2Stop3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -186,6 +192,7 @@ public class ETA extends javax.swing.JFrame {
             }
         });
 
+        jToggleButtonStop4Bus2.setBackground(new java.awt.Color(147, 112, 219));
         jToggleButtonStop4Bus2.setText("Shuttle Stop 4");
         jToggleButtonStop4Bus2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -196,6 +203,7 @@ public class ETA extends javax.swing.JFrame {
         jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\dance\\Downloads\\Bus1 (1).png")); // NOI18N
         jLabel5.setText("jLabel5");
 
+        jToggleButtonStop1Bus2.setBackground(new java.awt.Color(147, 112, 219));
         jToggleButtonStop1Bus2.setText("Shuttle Stop 1");
         jToggleButtonStop1Bus2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -321,7 +329,7 @@ try{
          int stopTime = stop * avgStopTime;
          //add time to stops time
          int ETA = minTime + stopTime;
-         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");  
+         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm a");  
         LocalDateTime now = LocalDateTime.now().plusMinutes(ETA); 
         //LocalDateTime eta = now + ETA;
         //System.out.println(dtf.format(now)); 
@@ -342,14 +350,15 @@ try{
      //bwrite.write("shuttle bus stop ");
      writer.close();
      
-     File capFile = new File("Capacity.txt");
+    
+     File capFile = new File("BusCapacity.txt");
      if(!capFile.exists()){
          capFile.createNewFile();
      }
      FileWriter Writer = new FileWriter(capFile,true);
       BufferedWriter bwrite = new BufferedWriter(Writer);
        bwrite.write("shuttle bus location: " + busLocation + "User location " + busStop + "number of stops " + stop + '\n');
-     Writer.close();
+       bwrite.close();
      
      File etaFile = new File("ETA.txt");
      if(!etaFile.exists()){
@@ -357,7 +366,7 @@ try{
      }
      FileWriter etaWrite = new FileWriter(etaFile,true);
       BufferedWriter etaBw = new BufferedWriter(etaWrite);
-     etaBw.write(busLocation + " " + busStop + " " + milesFrom + " " + speed + " " + stopsBeforeArrival + " " + avgStopTime);
+     etaBw.write("shuttle bus location: " + busLocation + " User Location: " + busStop + " Distance between stops " + milesFrom + " Speed of shuttle bus: " + speed + " number of stops shuttle makes: " + stopsBeforeArrival + " time at stops: " + avgStopTime + '\n');
      etaBw.close();
          
      }
@@ -415,7 +424,7 @@ try{
          int stopTime = stop * avgStopTime;
          //add time to stops time
          int ETA = minTime + stopTime;
-         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");  
+         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm a");  
         LocalDateTime now = LocalDateTime.now().plusMinutes(ETA); 
         //LocalDateTime eta = now + ETA;
         //System.out.println(dtf.format(now)); 
@@ -436,14 +445,14 @@ try{
      //bwrite.write("shuttle bus stop ");
      writer.close();
      
-     File capFile = new File("Capacity.txt");
+     File capFile = new File("BusCapacity.txt");
      if(!capFile.exists()){
          capFile.createNewFile();
      }
      FileWriter Writer = new FileWriter(capFile,true);
       BufferedWriter bwrite = new BufferedWriter(Writer);
        bwrite.write("shuttle bus location: " + busLocation + "User location " + busStop + "number of stops " + stop + '\n');
-     Writer.close();
+     bwrite.close();
       
      File etaFile = new File("ETA.txt");
      if(!etaFile.exists()){
@@ -451,7 +460,7 @@ try{
      }
      FileWriter etaWrite = new FileWriter(etaFile,true);
       BufferedWriter etaBw = new BufferedWriter(etaWrite);
-     etaBw.write(busLocation + " " + busStop + " " + milesFrom + " " + speed + " " + stopsBeforeArrival + " " + avgStopTime);
+     etaBw.write("shuttle bus location: " + busLocation + " User Location: " + busStop + " Distance between stops " + milesFrom + " Speed of shuttle bus: " + speed + " number of stops shuttle makes: " + stopsBeforeArrival + " time at stops: " + avgStopTime + '\n');
      etaBw.close();
      
      }
@@ -510,7 +519,7 @@ try{
          int stopTime = stop * avgStopTime;
          //add time to stops time
          int ETA = minTime + stopTime;
-         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");  
+         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm a");  
         LocalDateTime now = LocalDateTime.now().plusMinutes(ETA); 
         //LocalDateTime eta = now + ETA;
         //System.out.println(dtf.format(now)); 
@@ -531,14 +540,14 @@ try{
      //bwrite.write("shuttle bus stop ");
      writer.close();
      
-     File capFile = new File("Capacity.txt");
+     File capFile = new File("BusCapacity.txt");
      if(!capFile.exists()){
          capFile.createNewFile();
      }
      FileWriter Writer = new FileWriter(capFile,true);
       BufferedWriter bwrite = new BufferedWriter(Writer);
        bwrite.write("shuttle bus location: " + busLocation + "User location " + busStop + "number of stops " + stop + '\n');
-     Writer.close();
+     bwrite.close();
       
      File etaFile = new File("ETA.txt");
      if(!etaFile.exists()){
@@ -546,7 +555,7 @@ try{
      }
      FileWriter etaWrite = new FileWriter(etaFile,true);
       BufferedWriter etaBw = new BufferedWriter(etaWrite);
-     etaBw.write(busLocation + " " + busStop + " " + milesFrom + " " + speed + " " + stopsBeforeArrival + " " + avgStopTime);
+     etaBw.write("shuttle bus location: " + busLocation + " User Location: " + busStop + " Distance between stops " + milesFrom + " Speed of shuttle bus: " + speed + " number of stops shuttle makes: " + stopsBeforeArrival + " time at stops: " + avgStopTime + '\n');
      etaBw.close();
          
      }
@@ -607,7 +616,7 @@ try{
          int stopTime = stop * avgStopTime;
          //add time to stops time
          int ETA = minTime + stopTime;
-         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");  
+         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm a");  
         LocalDateTime now = LocalDateTime.now().plusMinutes(ETA); 
         //LocalDateTime eta = now + ETA;
         //System.out.println(dtf.format(now)); 
@@ -628,14 +637,14 @@ try{
      //bwrite.write("shuttle bus stop ");
      writer.close();
      
-     File capFile = new File("Capacity.txt");
+     File capFile = new File("BusCapacity.txt");
      if(!capFile.exists()){
          capFile.createNewFile();
      }
      FileWriter Writer = new FileWriter(capFile,true);
       BufferedWriter bwrite = new BufferedWriter(Writer);
        bwrite.write("shuttle bus location: " + busLocation + "User location " + busStop + "number of stops " + stop + '\n');
-     Writer.close();
+     bwrite.close();
      
      File etaFile = new File("ETA.txt");
      if(!etaFile.exists()){
@@ -643,7 +652,7 @@ try{
      }
      FileWriter etaWrite = new FileWriter(etaFile,true);
       BufferedWriter etaBw = new BufferedWriter(etaWrite);
-     etaBw.write(busLocation + " " + busStop + " " + milesFrom + " " + speed + " " + stopsBeforeArrival + " " + avgStopTime);
+     etaBw.write("shuttle bus location: " + busLocation + " User Location: " + busStop + " Distance between stops " + milesFrom + " Speed of shuttle bus: " + speed + " number of stops shuttle makes: " + stopsBeforeArrival + " time at stops: " + avgStopTime + '\n');
      etaBw.close();
   
 }
@@ -720,7 +729,7 @@ try{
          int stopTime = stop * avgStopTime;
          //add time to stops time
          int ETA = minTime + stopTime;
-         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");  
+         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm a");  
         LocalDateTime now = LocalDateTime.now().plusMinutes(ETA); 
         //LocalDateTime eta = now + ETA;
         //System.out.println(dtf.format(now)); 
@@ -741,14 +750,14 @@ try{
      //bwrite.write("shuttle bus stop ");
      writer.close();
      
-     File capFile = new File("Capacity.txt");
+     File capFile = new File("BusCapacity.txt");
      if(!capFile.exists()){
          capFile.createNewFile();
      }
      FileWriter Writer = new FileWriter(capFile,true);
       BufferedWriter bwrite = new BufferedWriter(Writer);
        bwrite.write("shuttle bus location: " + busLocation + "User location " + busStop + "number of stops " + stop + '\n');
-     Writer.close();
+     bwrite.close();
      
      File etaFile = new File("ETA.txt");
      if(!etaFile.exists()){
@@ -756,7 +765,7 @@ try{
      }
      FileWriter etaWrite = new FileWriter(etaFile,true);
       BufferedWriter etaBw = new BufferedWriter(etaWrite);
-     etaBw.write(busLocation + " " + busStop + " " + milesFrom + " " + speed + " " + stopsBeforeArrival + " " + avgStopTime);
+     etaBw.write("shuttle bus location: " + busLocation + " User Location: " + busStop + " Distance between stops " + milesFrom + " Speed of shuttle bus: " + speed + " number of stops shuttle makes: " + stopsBeforeArrival + " time at stops: " + avgStopTime + '\n');
      etaBw.close();
          
      }
@@ -814,7 +823,7 @@ try{
          int stopTime = stop * avgStopTime;
          //add time to stops time
          int ETA = minTime + stopTime;
-         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");  
+         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm a");  
         LocalDateTime now = LocalDateTime.now().plusMinutes(ETA); 
         //LocalDateTime eta = now + ETA;
         //System.out.println(dtf.format(now)); 
@@ -835,14 +844,14 @@ try{
      //bwrite.write("shuttle bus stop ");
      writer.close();
      
-     File capFile = new File("Capacity.txt");
+     File capFile = new File("BusCapacity.txt");
      if(!capFile.exists()){
          capFile.createNewFile();
      }
      FileWriter Writer = new FileWriter(capFile,true);
       BufferedWriter bwrite = new BufferedWriter(Writer);
        bwrite.write("shuttle bus location: " + busLocation + "User location " + busStop + "number of stops " + stop + '\n');
-     Writer.close();
+     bwrite.close();
      
      File etaFile = new File("ETA.txt");
      if(!etaFile.exists()){
@@ -850,7 +859,7 @@ try{
      }
      FileWriter etaWrite = new FileWriter(etaFile,true);
       BufferedWriter etaBw = new BufferedWriter(etaWrite);
-     etaBw.write(busLocation + " " + busStop + " " + milesFrom + " " + speed + " " + stopsBeforeArrival + " " + avgStopTime);
+     etaBw.write("shuttle bus location: " + busLocation + " User Location: " + busStop + " Distance between stops " + milesFrom + " Speed of shuttle bus: " + speed + " number of stops shuttle makes: " + stopsBeforeArrival + " time at stops: " + avgStopTime + '\n');
      etaBw.close();
          
      }
@@ -908,7 +917,7 @@ try{
          int stopTime = stop * avgStopTime;
          //add time to stops time
          int ETA = minTime + stopTime;
-         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm");  
+         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm a");  
         LocalDateTime now = LocalDateTime.now().plusMinutes(ETA); 
         //LocalDateTime eta = now + ETA;
         //System.out.println(dtf.format(now)); 
@@ -929,14 +938,14 @@ try{
      //bwrite.write("shuttle bus stop ");
      writer.close();
      
-    File capFile = new File("Capacity.txt");
+    File capFile = new File("BusCapacity.txt");
      if(!capFile.exists()){
          capFile.createNewFile();
      }
      FileWriter Writer = new FileWriter(capFile,true);
       BufferedWriter bwrite = new BufferedWriter(Writer);
        bwrite.write("shuttle bus location: " + busLocation + "User location " + busStop + "number of stops " + stop + '\n');
-     Writer.close();
+     bwrite.close();
      
      File etaFile = new File("ETA.txt");
      if(!etaFile.exists()){
@@ -944,7 +953,7 @@ try{
      }
      FileWriter etaWrite = new FileWriter(etaFile,true);
       BufferedWriter etaBw = new BufferedWriter(etaWrite);
-     etaBw.write(busLocation + " " + busStop + " " + milesFrom + " " + speed + " " + stopsBeforeArrival + " " + avgStopTime);
+      etaBw.write("shuttle bus location: " + busLocation + " User Location: " + busStop + " Distance between stops " + milesFrom + " Speed of shuttle bus: " + speed + " number of stops shuttle makes: " + stopsBeforeArrival + " time at stops: " + avgStopTime + '\n');
      etaBw.close();
          
      }
@@ -1004,7 +1013,7 @@ try{
          //add time to stops time
          int ETA = minTime + stopTime;
          //actual time
-        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");  
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm a");  
         LocalDateTime now = LocalDateTime.now().plusMinutes(ETA); 
         //LocalDateTime eta = now + ETA;
         //System.out.println(dtf.format(now)); 
@@ -1025,7 +1034,7 @@ try{
      //bwrite.write("shuttle bus stop ");
      writer.close();
      
-     File capFile = new File("Capacity.txt");
+     File capFile = new File("BusCapacity.txt");
 
            if(!capFile.exists()){
                capFile.createNewFile();
@@ -1034,7 +1043,7 @@ try{
       FileWriter Writer = new FileWriter(capFile,true);
       BufferedWriter bwrite = new BufferedWriter(Writer);
        bwrite.write("shuttle bus location: " + busLocation + "User location " + busStop + "number of stops " + stop + '\n');
-     Writer.close();
+     bwrite.close();
      
      File etaFile = new File("ETA.txt");
      if(!etaFile.exists()){
@@ -1042,7 +1051,7 @@ try{
      }
      FileWriter etaWrite = new FileWriter(etaFile,true);
      BufferedWriter etaBw = new BufferedWriter(etaWrite);
-     etaBw.write(busLocation + " " + busStop + " " + milesFrom + " " + speed + " " + stopsBeforeArrival + " " + avgStopTime);
+     etaBw.write("shuttle bus location: " + busLocation + " User Location: " + busStop + " Distance between stops " + milesFrom + " Speed of shuttle bus: " + speed + " number of stops shuttle makes: " + stopsBeforeArrival + " time at stops: " + avgStopTime + '\n');
      etaBw.close();
          
      }
